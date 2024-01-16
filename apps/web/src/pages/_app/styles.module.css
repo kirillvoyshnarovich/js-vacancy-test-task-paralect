@@ -1,0 +1,14 @@
+.notification {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.container {
+    background-color: var(--Gray-Warm-0, #FCFCFC);
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    width: 100vw;
+    padding: 0px;
+}

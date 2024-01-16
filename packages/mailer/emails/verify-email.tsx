@@ -5,7 +5,7 @@ import Layout from './_layout';
 import Button from './components/button';
 
 export interface VerifyEmailProps {
-  firstName: string;
+  firstName?: string;
   href: string;
 }
 

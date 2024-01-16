@@ -5,7 +5,8 @@ import emailService from './email/email.service';
 import googleService from './google/google.service';
 import rateLimitService from './rate-limit/rate-limit.service';
 import socketService from './socket/socket.service';
-
+import storageService from './firebase/firebase.service';
+import StripeService from './stripe/stripe.service';
 export {
   analyticsService,
   authService,
@@ -14,4 +15,6 @@ export {
   googleService,
   rateLimitService,
   socketService,
+  storageService,
+  StripeService,
 };

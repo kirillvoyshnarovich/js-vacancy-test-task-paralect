@@ -3,12 +3,11 @@ import Head from 'next/head';
 import router from 'next/router';
 import { NextPage } from 'next';
 import { Stack, Title, Text, Button } from '@mantine/core';
-
 import { RoutePath } from 'routes';
 
 const NotFound: NextPage = () => {
   const handleClick = useCallback(() => {
-    router.push(RoutePath.Home);
+    router.push(RoutePath.Product);
   }, []);
 
   return (

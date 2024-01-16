@@ -29,7 +29,7 @@ const Header: FC = () => {
         display="flex"
         fluid
       >
-        <Link type="router" href={RoutePath.Home}>
+        <Link type="router" href={RoutePath.Product}>
           <LogoImage />
         </Link>
         <UserMenu />

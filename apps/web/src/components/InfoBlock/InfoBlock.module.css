@@ -1,0 +1,25 @@
+.wrapperPage {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 50px
+}
+
+.ckeckoutButtonRoot {
+    width: 62%;
+    margin: 0 auto;
+    height: 40px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+ 
+.ckeckoutButtonLabel {
+    font-size: 15px;
+    font-weight: 300 !important;
+}
+
+.hints {
+    margin-bottom: 5px;
+    & > p {
+        line-height: 1.6 !important;
+    }
+}

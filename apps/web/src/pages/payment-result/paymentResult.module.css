@@ -1,0 +1,96 @@
+.filters {
+    background-color: var(--mantine-color-light-1);
+}
+
+.listProducts {
+    background-color: var(--mantine-color-light-1);
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filterWrapper {
+    background-color: white;
+    padding: 20px;
+    border: solid 1px #ECECEE;
+    border-radius: 12px;
+}
+
+.filterTitle {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 32px
+}
+
+.filterTitle__resetButton {
+    all: unset;
+    font-weight: 400;
+    color: #A3A3A3;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.rootInput {
+    width: 45%;
+}
+
+.textInput {
+    padding-left: 55px;
+    color: #000;
+    font-weight: 500;
+}
+
+.inputMarker {
+    padding: 0 0px;
+}
+
+.textInputFrom {
+    margin-left: 5px;
+}
+
+
+/* Products Section */
+.products__filterResult {
+    font-weight: 600;
+}
+
+.products__filterSort {
+    display: flex;
+    align-items: center;
+}
+
+.products__pillRoot {
+    height: 30px;
+    border: solid 1px #ECECEE;
+    background: white !important;
+    border: solid 1px #ECECEE;
+}
+
+.products__pillLabel {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: #201F22;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.products__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25px 0px;
+}
+
+.products__pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

@@ -30,7 +30,7 @@ const initKoa = () => {
   app.use(helmet());
   qs(app as any);
   app.use(bodyParser({
-    enableTypes: ['json', 'form', 'text'],
+    enableTypes: ['json', 'form', 'text', 'application/json', '*/*'],
     onerror: (err: Error, ctx) => {
       const errText: string = err.stack || err.toString();
       logger.warn(`Unable to parse request body. ${errText}`);

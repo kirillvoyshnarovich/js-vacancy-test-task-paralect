@@ -1,8 +1,9 @@
 import { FC, ReactElement } from 'react';
 import { AppShell } from '@mantine/core';
 
-import Header from './Header';
-import Footer from './Footer';
+// import Header from './Header';
+// import Footer from './Footer';
+import Header from 'components/Header';
 
 import classes from './MainLayout.module.css';
 
@@ -21,11 +22,11 @@ const MainLayout: FC<MainLayoutProps> = ({ children }) => (
   >
     <Header />
 
-    <AppShell.Main>
+    <AppShell.Main className={classes.appShell}>
       {children}
     </AppShell.Main>
 
-    <Footer />
+    {/* <Footer /> */}
   </AppShell>
 );
 

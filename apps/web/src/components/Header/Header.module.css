@@ -1,0 +1,51 @@
+.tab {
+  position: relative;
+  border: rem(px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4));
+  border-radius: 20px;
+  color: #CFCFCF;
+
+  &[data-active] {
+    z-index: 1;
+    background-color: #ECECEE;
+    color: black;
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 32px;
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.badgeRoot {
+  padding: 5px;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0px;
+  /* position: fixed; */
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  z-index: 999;
+}

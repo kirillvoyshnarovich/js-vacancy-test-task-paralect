@@ -1,0 +1,35 @@
+.productCard {
+    width: 27%;
+    height: 270px;
+}
+
+.badge {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    border-radius: 7px;
+    padding: 12px 8px;
+}
+
+.badge-yellow {
+    color: #F79009;
+    background-color: #FEF4E6;
+}
+
+.badge-green {
+    color: #17B26A;
+    background-color: #E8F7F0;
+}
+
+.section {
+    height: 175px;
+    max-height: 175px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}

@@ -1,17 +1,17 @@
 import React, { FC } from 'react';
 import { Options, renderAsync } from '@react-email/render';
 
-import { EmailComponent, Template, TemplateProps } from './template';
+import { EmailComponent, TemplateMailer, TemplateProps } from './template';
 
 export * from './template';
 
-export interface RenderEmailHtmlProps<T extends Template> {
+export interface RenderEmailHtmlProps<T extends TemplateMailer> {
   template: T
   params: TemplateProps[T]
   options?: Options
 }
 
-export const renderEmailHtml = async <T extends Template>({
+export const renderEmailHtml = async <T extends TemplateMailer>({
   template,
   params,
   options,

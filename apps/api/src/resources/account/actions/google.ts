@@ -48,13 +48,7 @@ const signInGoogleWithCode = async (ctx: AppKoaContext) => {
     ]);
 
   } else {
-    const lastName = payload.family_name || '';
-    const fullName = lastName ? `${payload.given_name} ${lastName}` : payload.given_name;
-
     const newUser = await userService.insertOne({
-      firstName: payload.given_name,
-      lastName,
-      fullName,
       email: payload.email,
       isEmailVerified: true,
       avatarUrl: payload.picture,

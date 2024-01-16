@@ -1,7 +1,7 @@
 import config from 'config';
 import sendgrid from '@sendgrid/mail';
 
-import { renderEmailHtml, Template } from 'mailer';
+import { renderEmailHtml, TemplateMailer } from 'mailer';
 
 import { From, EmailServiceConstructorProps, SendTemplateParams, SendSendgridTemplateParams } from './email.types';
 
@@ -17,7 +17,7 @@ class EmailService {
     if (apiKey) sendgrid.setApiKey(apiKey);
   }
 
-  async sendTemplate<T extends Template>({ to, subject, template, params }: SendTemplateParams<T>) {
+  async sendTemplate<T extends TemplateMailer>({ to, subject, template, params }: SendTemplateParams<T>) {
     if (!this.apiKey) return null;
 
     const html = await renderEmailHtml({ template, params });

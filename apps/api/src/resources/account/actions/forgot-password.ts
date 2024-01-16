@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { AppKoaContext, Next, AppRouter, Template, User } from 'types';
+import { AppKoaContext, Next, AppRouter, TemplateMailer, User } from 'types';
 import { EMAIL_REGEX } from 'app-constants';
 
 import { userService } from 'resources/user';
@@ -43,12 +43,11 @@ async function handler(ctx: AppKoaContext<ValidatedData>) {
 
   const resetPasswordUrl = `${config.API_URL}/account/verify-reset-token?token=${resetPasswordToken}&email=${encodeURIComponent(user.email)}`;
 
-  await emailService.sendTemplate<Template.RESET_PASSWORD>({
+  await emailService.sendTemplate<TemplateMailer.RESET_PASSWORD>({
     to: user.email,
     subject: 'Password Reset Request for Ship',
-    template: Template.RESET_PASSWORD,
+    template: TemplateMailer.RESET_PASSWORD,
     params: {
-      firstName: user.firstName,
       href: resetPasswordUrl,
     },
   });

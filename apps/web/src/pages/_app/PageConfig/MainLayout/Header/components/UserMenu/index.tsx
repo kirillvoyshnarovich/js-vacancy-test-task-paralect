@@ -2,13 +2,9 @@ import Link from 'next/link';
 import { memo, FC } from 'react';
 import { Menu } from '@mantine/core';
 import { IconUserCircle, IconLogout } from '@tabler/icons-react';
-
 import { accountApi } from 'resources/account';
-
 import { RoutePath } from 'routes';
-
 import MenuToggle from '../MenuToggle';
-
 import classes from './index.module.css';
 
 const UserMenu: FC = () => {

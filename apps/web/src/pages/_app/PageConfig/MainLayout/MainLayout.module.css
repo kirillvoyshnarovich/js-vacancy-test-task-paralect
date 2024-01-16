@@ -1,12 +1,18 @@
 .root {
   min-height: 100vh;
-  background-color: var(--mantine-color-gray-0);
-
+  height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 .main {
   padding: 32px;
-  padding-top: 104px;
+}
+
+.appShell {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
 }

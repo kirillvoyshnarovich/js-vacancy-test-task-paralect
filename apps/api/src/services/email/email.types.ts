@@ -1,4 +1,4 @@
-import { Template, TemplateProps } from 'mailer';
+import { TemplateMailer, TemplateProps } from 'mailer';
 
 export type From = { email: string, name: string };
 
@@ -7,7 +7,7 @@ export interface EmailServiceConstructorProps {
   from: From,
 }
 
-export interface SendTemplateParams<T extends Template> {
+export interface SendTemplateParams<T extends TemplateMailer> {
   to: string,
   subject: string,
   template: T,

@@ -15,6 +15,7 @@ module.exports = {
     'react/require-default-props': 'off',
     'import/prefer-default-export': 'off',
     'object-curly-newline': 'off',
+    'linebreak-style': ["error", "windows"],
     'max-len': ['warn', {
       code: 120,
       ignoreStrings: true,

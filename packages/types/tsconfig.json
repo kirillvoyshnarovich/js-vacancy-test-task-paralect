@@ -15,6 +15,7 @@
     "useUnknownInCatchVariables": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
+    "jsx": "react",
   },
   "include": [
     "src/**/*",

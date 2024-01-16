@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { AppKoaContext, Next, AppRouter, Template, User } from 'types';
+import { AppKoaContext, Next, AppRouter, TemplateMailer, User } from 'types';
 import { EMAIL_REGEX } from 'app-constants';
 
 import { userService } from 'resources/user';
@@ -39,12 +39,11 @@ async function handler(ctx: AppKoaContext<ValidatedData>) {
 
   await Promise.all([
     userService.updateOne({ _id: user._id }, () => ({ resetPasswordToken })),
-    emailService.sendTemplate<Template.RESET_PASSWORD>({
+    emailService.sendTemplate<TemplateMailer.RESET_PASSWORD>({
       to: user.email,
       subject: 'Password Reset Request for Ship',
-      template: Template.RESET_PASSWORD,
+      template: TemplateMailer.RESET_PASSWORD,
       params: {
-        firstName: user.firstName,
         href: resetPasswordUrl,
       },
     }),

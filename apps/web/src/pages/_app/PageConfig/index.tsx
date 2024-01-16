@@ -39,23 +39,20 @@ const PageConfig: FC<PageConfigProps> = ({ children }) => {
       analyticsService.setUser(account);
     },
   });
-
   if (isAccountLoading) return null;
-
   const { scope, layout } = routesConfiguration[route as RoutePath] || {};
   const Scope = scope ? scopeToComponent[scope] : Fragment;
   const Layout = layout ? layoutToComponent[layout] : Fragment;
-
   if (scope === ScopeType.PRIVATE && !account) {
     push(RoutePath.SignIn);
     return null;
   }
-
-  if (scope === ScopeType.PUBLIC && account) {
-    push(RoutePath.Home);
+  if (scope === ScopeType.PUBLIC
+      && account
+      && RoutePath.Product !== route) {
+    push(RoutePath.Product);
     return null;
   }
-
   return (
     <Scope>
       <Layout>

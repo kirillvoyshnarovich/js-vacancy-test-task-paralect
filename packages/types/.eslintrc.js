@@ -13,6 +13,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'object-curly-newline': 'off',
     'max-classes-per-file': 'off',
+    'linebreak-style': ["error", "windows"],
     'max-len': ['warn', {
       code: 120,
       ignoreStrings: true,

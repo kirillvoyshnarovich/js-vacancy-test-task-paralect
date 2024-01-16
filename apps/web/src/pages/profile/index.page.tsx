@@ -38,10 +38,6 @@ const Profile: NextPage = () => {
     formState: { errors },
   } = useForm<UpdateParams>({
     resolver: zodResolver(schema),
-    defaultValues: {
-      firstName: account?.firstName,
-      lastName: account?.lastName,
-    },
   });
 
   const {
