@@ -53,7 +53,7 @@ const app = initKoa();
     ioEmitter.initClient(),
     socketService(server),
   ]);
-
+  console.log('config.APP_ENV', config.APP_ENV);
   server.listen(config.PORT, () => {
     logger.info(`API server is listening on ${config.PORT}, in ${config.APP_ENV} environment`);
   });
