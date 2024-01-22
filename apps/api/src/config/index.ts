@@ -25,16 +25,16 @@ const schema = z.object({
   GOOGLE_CLIENT_ID: z.string().optional(),
   GOOGLE_CLIENT_SECRET: z.string().optional(),
   // FIREBASE
-  FIREBASE_API_KEY: z.string(),
-  FIREBASE_AUTH_DOMAIN: z.string(),
-  FIREBASE_PROJECT_ID: z.string(),
-  FIREBASE_STORAGE_BUCKET: z.string(),
-  FIREBASE_MESSAGING_SENDER_ID: z.string(),
-  FIREBASE_APP_ID: z.string(),
+  FIREBASE_API_KEY: z.string().optional(),
+  FIREBASE_AUTH_DOMAIN: z.string().optional(),
+  FIREBASE_PROJECT_ID: z.string().optional(),
+  FIREBASE_STORAGE_BUCKET: z.string().optional(),
+  FIREBASE_MESSAGING_SENDER_ID: z.string().optional(),
+  FIREBASE_APP_ID: z.string().optional(),
   // STRIPE
-  STRIPE_PUBLISH_KEY: z.string(),
-  STRIPE_SECRET_KEY: z.string(),
-  STRIPE_ENDPOINT_KEY: z.string(),
+  STRIPE_PUBLISH_KEY: z.string().optional(),
+  STRIPE_SECRET_KEY: z.string().optional(),
+  STRIPE_ENDPOINT_KEY: z.string().optional(),
 });
 
 type Config = z.infer<typeof schema>;
