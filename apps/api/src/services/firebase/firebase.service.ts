@@ -35,7 +35,7 @@ class StorageService {
   storageProduct: StorageReference;
 
   constructor(conf: FirebaseConfig) {
-
+    console.log('conf !!!!!!!!!!!!!!!!! ------------------ >', conf);
     this.app = initializeApp(conf);
     this.fileStorage = getStorage(this.app);
     this.storageProduct = ref(this.fileStorage);
