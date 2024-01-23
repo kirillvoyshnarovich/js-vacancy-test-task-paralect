@@ -16,7 +16,7 @@ import logger from 'logger';
 
 const imagesPath = '/productsImage';
 
-const firebaseConfig = {
+const fireBaseConf = {
   apiKey: config.FIREBASE_API_KEY,
   authDomain: config.FIREBASE_AUTH_DOMAIN,
   projectId: config.FIREBASE_PROJECT_ID,
@@ -88,4 +88,4 @@ class StorageService {
   }
 }
 
-export default new StorageService(firebaseConfig);
+export default new StorageService(fireBaseConf as FirebaseConfig);
